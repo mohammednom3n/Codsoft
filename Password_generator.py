@@ -25,4 +25,4 @@ for n in range(1, (nr_symbols+1)):
 
 final = letter+number+symbol
 final = ''.join(random.sample(final, len(final)))
-print(final)
+print(f"Password: {final}")
