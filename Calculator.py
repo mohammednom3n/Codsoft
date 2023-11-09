@@ -2,9 +2,7 @@ from tkinter import *
 from tkinter.messagebox import *
 
 
-# font settings
-
-font = ('Verdana', 20, 'bold')
+font = ('arial baltic', 20, 'bold')
 
 
 # functions
@@ -48,7 +46,7 @@ window.geometry('450x600')
 
 # heading Label
 heading = Label(window, text="Calculator", font=font)
-heading.pack(side=TOP, pady=10)
+heading.pack(side=TOP, pady=7)
 
 # textfield
 
@@ -63,12 +61,12 @@ frame.pack(side=TOP)
 
 # adding buttons now
 
-btnValue = 1
+buttonValue = 1
 for i in range(3):
     for j in range(3):
-        button = Button(frame, text=btnValue, font=font, width=5, height=2, relief='sunken', activebackground='red', activeforeground='white')
+        button = Button(frame, text=buttonValue, font=font, width=5, height=2, relief='sunken', activebackground='blue', activeforeground='white')
         button.grid(row=i, column=j, padx=3, pady=3)
-        btnValue += 1
+        buttonValue += 1
         button.bind(' <Button-1>', buttonclick)
 
 
@@ -99,8 +97,6 @@ clear_Button.grid(row= 4, column=0, columnspan=2, padx=3, pady=3)
 all_clear_Button = Button(frame, text="AC", font=font, width = 11, height=2, relief='sunken', command=all_clear)
 all_clear_Button.grid(row=4, column=2, columnspan=2, padx=3, pady=3)
 
-
-# binding rest of the buttons
 
 dot_button.bind(' <Button-1>', buttonclick)
 zero_button.bind(' <Button-1>', buttonclick)
